@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AppForge Studio · Le app</title>
+<meta name="description" content="Rialto, VoiceToTask, Syllabus Planner, Vault Fiscale e DeckSleeve: app per iPhone e Android fatte in Italia.">
+<meta property="og:title" content="AppForge Studio · Le app">
+<meta property="og:description" content="Cinque app per iPhone e Android, fatte in Italia. Gratis da provare.">
+<meta property="og:image" content="img/rialto-2.jpg">
+<meta name="theme-color" content="#F8F3EA">
+<link rel="icon" href="img/rialto.png">
+<style>
+@font-face{font-family:"Inter Tight";font-weight:500;font-display:swap;src:url(fonts/inter-tight-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:600;font-display:swap;src:url(fonts/inter-tight-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:700;font-display:swap;src:url(fonts/inter-tight-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:800;font-display:swap;src:url(fonts/inter-tight-latin-800-normal.woff2) format("woff2")}
+:root{
+  --paper:#F8F3EA; --card:#FFFFFF; --ink:#17140F; --muted:#5E584D; --line:#E6DDCC;
+  --rialto:#1F63AD; --vtt:#A8561F; --syl:#6A4FC0; --vault:#1F4FCB; --deck:#7A5C00; --deck-hl:#F5D24B;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
+header{padding:48px 0 20px;text-align:center}
+.brand{font-size:13px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--rialto)}
+h1{margin:14px 0 10px;font-size:clamp(34px,8vw,52px);line-height:1.04;letter-spacing:-.03em;font-weight:700}
+h1 em{font-style:normal;color:var(--rialto)}
+.lead{margin:0 auto;max-width:30em;color:var(--muted);font-size:17px;font-weight:500}
+.jump{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:26px 0 8px;padding:0;list-style:none}
+.jump a{display:flex;align-items:center;gap:8px;padding:8px 14px 8px 8px;border-radius:999px;background:var(--card);text-decoration:none;font-weight:700;font-size:15px;box-shadow:0 4px 14px rgba(60,40,10,.08);min-height:44px}
+.jump img{width:28px;height:28px;border-radius:7px}
+.band{display:block;width:100%;height:64px;background:url(img/banda.png) repeat-x center/auto 100%;opacity:.85;margin:18px 0 6px}
+.app{background:var(--card);border-radius:28px;padding:24px 0 22px;margin:22px 0;box-shadow:0 18px 50px rgba(60,40,10,.08);scroll-margin-top:16px}
+.top{display:flex;gap:16px;align-items:center;padding:0 22px}
+.top img{width:76px;height:76px;border-radius:18px;flex:none;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.top h2{margin:0;font-size:26px;letter-spacing:-.02em;line-height:1.1}
+.cat{margin:4px 0 0;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.desc{margin:16px 22px 0;font-size:17px;font-weight:500}
+.desc b{font-weight:700}
+.shots{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 22px 6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.shots::-webkit-scrollbar{display:none}
+.shots img{flex:none;width:44%;max-width:200px;border-radius:18px;scroll-snap-align:start;background:#eee;aspect-ratio:440/956;object-fit:cover}
+.cta{display:flex;flex-wrap:wrap;gap:10px;padding:14px 22px 0;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 20px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;font-size:16px}
+.btn svg{width:18px;height:18px}
+.btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.note{font-size:14px;color:var(--muted);font-weight:600}
+.rialto .cat{color:var(--rialto)} .vtt .cat{color:var(--vtt)} .syl .cat{color:var(--syl)} .vault .cat{color:var(--vault)} .deck .cat{color:var(--deck)}
+.hl{border-radius:4px}
+.deck .hl{padding:0 .15em}
+.rialto .hl{color:var(--rialto)} .vtt .hl{color:var(--vtt)} .syl .hl{color:var(--syl)} .vault .hl{color:var(--vault)} .deck .hl{background:var(--deck-hl)}
+footer{text-align:center;padding:26px 0 56px;color:var(--muted);font-size:15px;font-weight:600}
+footer a{color:var(--rialto);font-weight:700}
+@media (min-width:640px){.shots img{width:30%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">AppForge Studio</div>
+    <h1>Piccole app,<br><em>un lavoro ciascuna</em>.</h1>
+    <p class="lead">Cinque app per iPhone, fatte in Italia. Rialto c'è anche su Android. Tutte gratis da provare.</p>
+    <ul class="jump" aria-label="Vai a un'app">
+      <li><a href="#rialto"><img src="img/rialto.png" alt="">Rialto</a></li>
+      <li><a href="#voicetotask"><img src="img/voicetotask.png" alt="">VoiceToTask</a></li>
+      <li><a href="#syllabus"><img src="img/syllabus.png" alt="">Syllabus Planner</a></li>
+      <li><a href="#vault"><img src="img/vault.png" alt="">Vault Fiscale</a></li>
+      <li><a href="#decksleeve"><img src="img/decksleeve.png" alt="">DeckSleeve</a></li>
+    </ul>
+  </header>
+  <div class="band" aria-hidden="true"></div>
+
+  <main>
+    <section class="app rialto" id="rialto">
+      <div class="top">
+        <img src="img/rialto.png" alt="Icona di Rialto">
+        <div><h2>Rialto</h2><p class="cat">Spese e investimenti</p></div>
+      </div>
+      <p class="desc">Spese, budget e patrimonio, <span class="hl"><b>in un'app</b></span>. Paghi con Apple Pay e la spesa arriva in Rialto da confermare. Il mese parte dallo stipendio, e conti, ETF e crypto stanno in una schermata.</p>
+      <div class="shots">
+        <img src="img/rialto-2.jpg" alt="Rialto: tutti i tuoi soldi in una schermata" loading="lazy">
+        <img src="img/rialto-3.jpg" alt="Rialto: conti, contanti e obiettivi" loading="lazy">
+        <img src="img/rialto-4.jpg" alt="Rialto: dove finiscono i tuoi soldi" loading="lazy">
+        <img src="img/rialto-5.jpg" alt="Rialto: il patrimonio che cresce" loading="lazy">
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/app/id6804364683"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>App Store</a>
+        <a class="btn alt" href="https://play.google.com/store/apps/details?id=com.nicolo.rialto">Google Play</a>
+      </div>
+    </section>
+
+    <section class="app vtt" id="voicetotask">
+      <div class="top">
+        <img src="img/voicetotask.png" alt="Icona di VoiceToTask">
+        <div><h2>VoiceToTask</h2><p class="cat">Note vocali AI</p></div>
+      </div>
+      <p class="desc">Tu parli, <span class="hl"><b>lei trova le cose da fare</b></span>. Trascrive sul telefono e tira fuori task, scadenze e punti importanti. Niente diventa un task senza la tua conferma.</p>
+      <div class="shots">
+        <img src="img/voicetotask-2.jpg" alt="VoiceToTask: tu parli, lei trova le cose da fare" loading="lazy">
+        <img src="img/voicetotask-3.jpg" alt="VoiceToTask: il registratore che capisce cosa hai detto" loading="lazy">
+        <img src="img/voicetotask-4.jpg" alt="VoiceToTask: ogni cosa da fare con la frase da cui nasce" loading="lazy">
+        <img src="img/voicetotask-5.jpg" alt="VoiceToTask: sintesi, task e trascrizione" loading="lazy">
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/app/id6805474766"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>App Store</a>
+        <span class="note">Presto anche su Android</span>
+      </div>
+    </section>
+
+    <section class="app syl" id="syllabus">
+      <div class="top">
+        <img src="img/syllabus.png" alt="Icona di Syllabus Planner">
+        <div><h2>Syllabus Planner</h2><p class="cat">Piano esami</p></div>
+      </div>
+      <p class="desc">Ti dice <span class="hl"><b>cosa studiare oggi</b></span>, pagina per pagina. Parte dalle date d'appello e lavora all'indietro. Salti un giorno? Il piano si rifà. Gratis per un esame.</p>
+      <div class="shots">
+        <img src="img/syllabus-2.jpg" alt="Syllabus Planner: oggi sai già cosa studiare" loading="lazy">
+        <img src="img/syllabus-3.jpg" alt="Syllabus Planner: salti un giorno, il piano si rifà" loading="lazy">
+        <img src="img/syllabus-4.jpg" alt="Syllabus Planner: il timer di studio" loading="lazy">
+        <img src="img/syllabus-5.jpg" alt="Syllabus Planner: ogni esame, a che punto sei" loading="lazy">
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/app/id6805177869"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>App Store</a>
+        <span class="note">Presto anche su Android</span>
+      </div>
+    </section>
+
+    <section class="app vault" id="vault">
+      <div class="top">
+        <img src="img/vault.png" alt="Icona di Vault Fiscale">
+        <div><h2>Vault Fiscale</h2><p class="cat">730 e garanzie</p></div>
+      </div>
+      <p class="desc">Gli scontrini del 730 e le garanzie, <span class="hl"><b>in ordine da soli</b></span>. Scansioni lo scontrino e a giugno la cartella per il CAF è pronta. Ti avvisa prima che una garanzia scada.</p>
+      <div class="shots">
+        <img src="img/vault-2.jpg" alt="Vault Fiscale: quello che ti spetta esiste solo se lo conservi" loading="lazy">
+        <img src="img/vault-3.jpg" alt="Vault Fiscale: un anno di ricevute in ordine" loading="lazy">
+        <img src="img/vault-4.jpg" alt="Vault Fiscale: a giugno la cartella per il CAF è pronta" loading="lazy">
+        <img src="img/vault-5.jpg" alt="Vault Fiscale: una cassaforte sola" loading="lazy">
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/app/id6805537752"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>App Store</a>
+        <span class="note">Presto anche su Android</span>
+      </div>
+    </section>
+
+    <section class="app deck" id="decksleeve">
+      <div class="top">
+        <img src="img/decksleeve.png" alt="Icona di DeckSleeve">
+        <div><h2>DeckSleeve</h2><p class="cat">Scanner carte TCG</p></div>
+      </div>
+      <p class="desc">Inquadri la carta, <span class="hl"><b>la riconosce</b></span>: nome, set, numero e prezzo di oggi. Pokémon, Magic, Yu-Gi-Oh!, One Piece e Dragon Ball Super. 10 scansioni gratis al giorno.</p>
+      <div class="shots">
+        <img src="img/decksleeve-2.jpg" alt="DeckSleeve: inquadri la carta, la riconosce" loading="lazy">
+        <img src="img/decksleeve-3.jpg" alt="DeckSleeve: quanto vale la tua collezione" loading="lazy">
+        <img src="img/decksleeve-4.jpg" alt="DeckSleeve: il prezzo di oggi, con fonte e data" loading="lazy">
+        <img src="img/decksleeve-5.jpg" alt="DeckSleeve: ogni set, carta per carta" loading="lazy">
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/app/id6808454285"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>App Store</a>
+        <span class="note">App indipendente, non affiliata ai giochi</span>
+      </div>
+    </section>
+  </main>
+
+  <div class="band" aria-hidden="true"></div>
+  <footer>
+    <p>Seguici su Instagram: <a href="https://www.instagram.com/app.forgestudio/">@app.forgestudio</a></p>
+  </footer>
+</div>
+</body>
+</html>
