@@ -4,85 +4,144 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AppForge Studio · Le app</title>
-<meta name="description" content="Rialto, VoiceToTask, Syllabus Planner, Vault Fiscale e DeckSleeve: app per iPhone e Android fatte in Italia.">
+<meta name="description" content="Rialto, VoiceToTask, Syllabus Planner, Vault Fiscale e DeckSleeve: app per iPhone e Android fatte in Italia. Gratis da provare.">
 <meta property="og:title" content="AppForge Studio · Le app">
-<meta property="og:description" content="Cinque app per iPhone e Android, fatte in Italia. Gratis da provare.">
-<meta property="og:image" content="img/rialto-2.jpg">
+<meta property="og:description" content="Cinque app per iPhone, fatte in Italia. Gratis da provare.">
+<meta property="og:image" content="https://app-forgestudio.github.io/img/rialto-1.jpg">
 <meta name="theme-color" content="#F8F3EA">
+<meta name="color-scheme" content="light">
 <link rel="icon" href="img/rialto.png">
 <style>
 @font-face{font-family:"Inter Tight";font-weight:500;font-display:swap;src:url(fonts/inter-tight-latin-500-normal.woff2) format("woff2")}
 @font-face{font-family:"Inter Tight";font-weight:600;font-display:swap;src:url(fonts/inter-tight-latin-600-normal.woff2) format("woff2")}
 @font-face{font-family:"Inter Tight";font-weight:700;font-display:swap;src:url(fonts/inter-tight-latin-700-normal.woff2) format("woff2")}
 @font-face{font-family:"Inter Tight";font-weight:800;font-display:swap;src:url(fonts/inter-tight-latin-800-normal.woff2) format("woff2")}
-:root{
-  --paper:#F8F3EA; --card:#FFFFFF; --ink:#17140F; --muted:#5E584D; --line:#E6DDCC;
-  --rialto:#1F63AD; --vtt:#A8561F; --syl:#6A4FC0; --vault:#1F4FCB; --deck:#7A5C00; --deck-hl:#F5D24B;
-}
+:root{--paper:#F8F3EA;--card:#FFFFFF;--ink:#17140F;--muted:#5E584D;--blue:#1F63AD}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45;overflow-x:hidden}
 a{color:inherit}
-.wrap{max-width:720px;margin:0 auto;padding:0 16px}
-header{padding:48px 0 20px;text-align:center}
-.brand{font-size:13px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--rialto)}
-h1{margin:14px 0 10px;font-size:clamp(34px,8vw,52px);line-height:1.04;letter-spacing:-.03em;font-weight:700}
-h1 em{font-style:normal;color:var(--rialto)}
-.lead{margin:0 auto;max-width:30em;color:var(--muted);font-size:17px;font-weight:500}
-.android{margin:14px auto 0;max-width:30em;padding:12px 18px;border-radius:18px;background:var(--card);color:var(--muted);font-size:15px;font-weight:500;box-shadow:0 4px 14px rgba(60,40,10,.06)}
-.android b{color:var(--ink);font-weight:700}
-.jump{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:26px 0 8px;padding:0;list-style:none}
-.jump a{display:flex;align-items:center;gap:8px;padding:8px 14px 8px 8px;border-radius:999px;background:var(--card);text-decoration:none;font-weight:700;font-size:15px;box-shadow:0 4px 14px rgba(60,40,10,.08);min-height:44px}
-.jump img{width:28px;height:28px;border-radius:7px}
-.band{display:block;width:100%;height:64px;background:url(img/banda.png) repeat-x center/auto 100%;opacity:.85;margin:18px 0 6px}
-.app{background:var(--card);border-radius:28px;padding:24px 0 22px;margin:22px 0;box-shadow:0 18px 50px rgba(60,40,10,.08);scroll-margin-top:16px}
-.top{display:flex;gap:16px;align-items:center;padding:0 22px}
-.top img{width:76px;height:76px;border-radius:18px;flex:none;box-shadow:0 6px 18px rgba(0,0,0,.12)}
-.top h2{margin:0;font-size:26px;letter-spacing:-.02em;line-height:1.1}
-.cat{margin:4px 0 0;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-.desc{margin:16px 22px 0;font-size:17px;font-weight:500}
-.desc b{font-weight:700}
-.shots{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 22px 6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+img{display:block}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+/* barra in alto */
+.bar{position:sticky;top:0;z-index:10;background:rgba(248,243,234,.82);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid rgba(23,20,15,.06)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;font-size:16px;letter-spacing:-.01em;text-decoration:none}
+.logo span{color:var(--blue)}
+.mini{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.mini a{display:block;border-radius:11px;transition:transform .2s}
+.mini a:hover{transform:translateY(-2px)}
+.mini img{width:36px;height:36px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+
+/* apertura */
+.hero{text-align:center;padding:44px 0 8px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--blue)}
+.fan{display:flex;justify-content:center;margin:30px 0 26px;height:clamp(92px,26vw,118px)}
+.fan a{display:block;margin:0 -10px;border-radius:24px;transition:transform .25s}
+.fan img{width:clamp(64px,19vw,92px);height:clamp(64px,19vw,92px);border-radius:22px;box-shadow:0 14px 30px rgba(40,30,10,.20),0 0 0 3px var(--paper)}
+.fan a:nth-child(1){transform:rotate(-14deg) translateY(16px)}
+.fan a:nth-child(2){transform:rotate(-7deg) translateY(4px)}
+.fan a:nth-child(3){transform:translateY(-2px);z-index:2}
+.fan a:nth-child(4){transform:rotate(7deg) translateY(4px)}
+.fan a:nth-child(5){transform:rotate(14deg) translateY(16px)}
+.fan a:hover{transform:translateY(-10px) scale(1.06)!important;z-index:3}
+.fan .f{animation:float 5s ease-in-out infinite}
+.fan a:nth-child(2) .f{animation-delay:-1s}.fan a:nth-child(3) .f{animation-delay:-2s}.fan a:nth-child(4) .f{animation-delay:-3s}.fan a:nth-child(5) .f{animation-delay:-4s}
+@keyframes float{50%{transform:translateY(-6px)}}
+@media (prefers-reduced-motion:reduce){.fan .f{animation:none}}
+h1{margin:0;font-size:clamp(40px,10vw,68px);line-height:.98;letter-spacing:-.045em;font-weight:800}
+h1 em{font-style:normal;color:var(--blue)}
+.lead{margin:18px auto 0;max-width:28em;color:var(--muted);font-size:18px;font-weight:500}
+.android{display:inline-flex;gap:10px;align-items:flex-start;text-align:left;margin:22px auto 0;max-width:32em;padding:14px 18px;border-radius:20px;background:var(--card);font-size:15px;color:var(--muted);box-shadow:0 6px 20px rgba(60,40,10,.07)}
+.android b{color:var(--ink)}
+.dot{flex:none;width:10px;height:10px;margin-top:6px;border-radius:50%;background:#3DDC84;box-shadow:0 0 0 4px rgba(61,220,132,.22)}
+.band{height:72px;margin:40px -16px 8px;background:url(img/banda.png) repeat-x center/auto 100%;opacity:.8}
+
+/* schede app */
+.app{--a:var(--blue);--t:#E7EFF9;position:relative;margin:28px 0;padding:26px 0 24px;border-radius:32px;background:linear-gradient(180deg,var(--t) 0,var(--card) 220px);box-shadow:0 22px 60px rgba(60,40,10,.09);overflow:hidden;scroll-margin-top:76px}
+.app.vtt{--a:#A8561F;--t:#F7EADF}.app.syl{--a:#6A4FC0;--t:#EEEAFA}.app.vault{--a:#1F4FCB;--t:#E5ECFC}.app.deck{--a:#7A5C00;--t:#FBF1CC}
+.num{position:absolute;right:18px;top:10px;font-size:clamp(52px,14vw,76px);z-index:0;font-weight:800;letter-spacing:-.05em;line-height:1;color:transparent;-webkit-text-stroke:2px var(--a);opacity:.22}
+.top{position:relative;z-index:1;display:flex;gap:18px;align-items:center;padding:0 24px}
+.top img{width:88px;height:88px;border-radius:21px;flex:none;box-shadow:0 10px 24px rgba(0,0,0,.16)}
+.top h2{margin:0;font-size:30px;letter-spacing:-.03em;line-height:1.05}
+.cat{margin:6px 0 0;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--a)}
+.desc{margin:18px 24px 0;font-size:18px;font-weight:500;color:#2B2720}
+.desc b{font-weight:700;color:var(--a)}
+.deck .desc b{color:var(--ink);background:#F5D24B;padding:0 .18em;border-radius:5px}
+.feat{display:flex;flex-wrap:wrap;gap:8px;margin:16px 24px 0;padding:0;list-style:none}
+.feat li{padding:7px 12px;border-radius:999px;background:var(--t);color:var(--ink);font-size:14px;font-weight:600}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:22px 24px 10px;scroll-padding:0 24px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .shots::-webkit-scrollbar{display:none}
-.shots img{flex:none;width:44%;max-width:200px;border-radius:18px;scroll-snap-align:start;background:#eee;aspect-ratio:440/956;object-fit:cover}
-.cta{display:flex;flex-wrap:wrap;gap:10px;padding:14px 22px 0;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 20px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;font-size:16px}
-.btn svg{width:18px;height:18px}
-.btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
-.note{font-size:14px;color:var(--muted);font-weight:600}
-.rialto .cat{color:var(--rialto)} .vtt .cat{color:var(--vtt)} .syl .cat{color:var(--syl)} .vault .cat{color:var(--vault)} .deck .cat{color:var(--deck)}
-.hl{border-radius:4px}
-.deck .hl{padding:0 .15em}
-.rialto .hl{color:var(--rialto)} .vtt .hl{color:var(--vtt)} .syl .hl{color:var(--syl)} .vault .hl{color:var(--vault)} .deck .hl{background:var(--deck-hl)}
-footer{text-align:center;padding:26px 0 56px;color:var(--muted);font-size:15px;font-weight:600}
-footer a{color:var(--rialto);font-weight:700}
-@media (min-width:640px){.shots img{width:30%}}
+.shots img{flex:none;width:58%;max-width:230px;border-radius:20px;scroll-snap-align:start;background:#eee;aspect-ratio:440/956;object-fit:cover;box-shadow:0 12px 28px rgba(40,30,10,.14);transition:transform .25s}
+.shots img:hover{transform:translateY(-4px)}
+.hint{margin:2px 24px 0;font-size:13px;font-weight:600;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;padding:18px 24px 0;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:6px 20px 6px 16px;border-radius:14px;background:var(--ink);color:#fff;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.badge:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.18)}
+.badge svg{width:24px;height:24px;flex:none}
+.badge small{display:block;font-size:11px;font-weight:600;opacity:.8;line-height:1.1}
+.badge strong{display:block;font-size:19px;font-weight:700;line-height:1.1;letter-spacing:-.01em}
+.soon{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:999px;background:var(--t);font-size:14px;font-weight:700;color:var(--ink)}
+.soon .dot{margin:0}
+.note{flex-basis:100%;font-size:13px;font-weight:600;color:var(--muted)}
+
+/* chiusura */
+.end{text-align:center;padding:24px 0 64px}
+.end h3{margin:0 0 16px;font-size:clamp(28px,7vw,40px);letter-spacing:-.04em;line-height:1.05}
+.ig{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;font-size:17px}
+.ig svg{width:20px;height:20px}
+.small{margin-top:22px;font-size:13px;color:var(--muted);font-weight:600}
+
+/* comparsa allo scorrimento */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+@media (min-width:640px){.shots img{width:31%}.top img{width:100px;height:100px}.top h2{font-size:36px}}
 </style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="brand">AppForge Studio</div>
-    <h1>Piccole app,<br><em>un lavoro ciascuna</em>.</h1>
-    <p class="lead">Cinque app per iPhone, fatte in Italia. Tutte gratis da provare.</p>
-    <p class="android"><b>Su Android</b> c'è già Rialto. <b>In arrivo:</b> VoiceToTask, Syllabus Planner, Vault Fiscale e DeckSleeve.</p>
-    <ul class="jump" aria-label="Vai a un'app">
-      <li><a href="#rialto"><img src="img/rialto.png" alt="">Rialto</a></li>
-      <li><a href="#voicetotask"><img src="img/voicetotask.png" alt="">VoiceToTask</a></li>
-      <li><a href="#syllabus"><img src="img/syllabus.png" alt="">Syllabus Planner</a></li>
-      <li><a href="#vault"><img src="img/vault.png" alt="">Vault Fiscale</a></li>
-      <li><a href="#decksleeve"><img src="img/decksleeve.png" alt="">DeckSleeve</a></li>
+
+<nav class="bar" aria-label="Le app">
+  <div class="wrap">
+    <a class="logo" href="#top">AppForge <span>Studio</span></a>
+    <ul class="mini">
+      <li><a href="#rialto" aria-label="Rialto"><img src="img/rialto.png" alt=""></a></li>
+      <li><a href="#voicetotask" aria-label="VoiceToTask"><img src="img/voicetotask.png" alt=""></a></li>
+      <li><a href="#syllabus" aria-label="Syllabus Planner"><img src="img/syllabus.png" alt=""></a></li>
+      <li><a href="#vault" aria-label="Vault Fiscale"><img src="img/vault.png" alt=""></a></li>
+      <li><a href="#decksleeve" aria-label="DeckSleeve"><img src="img/decksleeve.png" alt=""></a></li>
     </ul>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+  <header class="hero">
+    <div class="kicker">Fatte in Italia</div>
+    <div class="fan">
+      <a href="#rialto" aria-label="Rialto"><div class="f"><img src="img/rialto.png" alt=""></div></a>
+      <a href="#voicetotask" aria-label="VoiceToTask"><div class="f"><img src="img/voicetotask.png" alt=""></div></a>
+      <a href="#syllabus" aria-label="Syllabus Planner"><div class="f"><img src="img/syllabus.png" alt=""></div></a>
+      <a href="#vault" aria-label="Vault Fiscale"><div class="f"><img src="img/vault.png" alt=""></div></a>
+      <a href="#decksleeve" aria-label="DeckSleeve"><div class="f"><img src="img/decksleeve.png" alt=""></div></a>
+    </div>
+    <h1>Piccole app,<br><em>un lavoro ciascuna.</em></h1>
+    <p class="lead">Cinque app per iPhone, pensate per le cose di tutti i giorni. Tutte gratis da provare.</p>
+    <p class="android"><span class="dot" aria-hidden="true"></span><span><b>Su Android</b> c'è già Rialto. <b>In arrivo:</b> VoiceToTask, Syllabus Planner, Vault Fiscale e DeckSleeve.</span></p>
   </header>
   <div class="band" aria-hidden="true"></div>
 
   <main>
-    <section class="app rialto" id="rialto">
+    <section class="app rialto rv" id="rialto">
+      <span class="num" aria-hidden="true">01</span>
       <div class="top">
         <img src="img/rialto.png" alt="Icona di Rialto">
         <div><h2>Rialto</h2><p class="cat">Spese e investimenti</p></div>
       </div>
-      <p class="desc">Spese, budget e patrimonio, <span class="hl"><b>in un'app</b></span>. Paghi con Apple Pay e la spesa arriva in Rialto da confermare. Il mese parte dallo stipendio, e conti, ETF e crypto stanno in una schermata.</p>
+      <p class="desc">Spese, budget e patrimonio, <b>in un'app</b>. Paghi con Apple Pay e la spesa arriva in Rialto da confermare.</p>
+      <ul class="feat"><li>Budget dallo stipendio</li><li>Conti e contanti</li><li>ETF e crypto</li><li>Apple Watch</li></ul>
       <div class="shots">
         <img src="img/rialto-1.jpg" alt="Rialto: spese, budget, patrimonio, tutto in un'app" loading="lazy">
         <img src="img/rialto-2.jpg" alt="Rialto: tutti i tuoi soldi in una schermata" loading="lazy">
@@ -90,18 +149,21 @@ footer a{color:var(--rialto);font-weight:700}
         <img src="img/rialto-4.jpg" alt="Rialto: dove finiscono i tuoi soldi" loading="lazy">
         <img src="img/rialto-5.jpg" alt="Rialto: il patrimonio che cresce" loading="lazy">
       </div>
+      <p class="hint">Scorri le schermate →</p>
       <div class="cta">
-        <a class="btn" href="https://apps.apple.com/app/id6804364683"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>App Store</a>
-        <a class="btn alt" href="https://play.google.com/store/apps/details?id=com.nicolo.rialto">Google Play</a>
+        <a class="badge" href="https://apps.apple.com/app/id6804364683"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg><span><small>Scarica su</small><strong>App Store</strong></span></a>
+        <a class="badge" href="https://play.google.com/store/apps/details?id=com.nicolo.rialto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3.8v16.4c0 .8.9 1.3 1.6.9l13.5-8.2c.7-.4.7-1.4 0-1.8L7.6 2.9C6.9 2.5 6 3 6 3.8z"/></svg><span><small>Disponibile su</small><strong>Google Play</strong></span></a>
       </div>
     </section>
 
-    <section class="app vtt" id="voicetotask">
+    <section class="app vtt rv" id="voicetotask">
+      <span class="num" aria-hidden="true">02</span>
       <div class="top">
         <img src="img/voicetotask.png" alt="Icona di VoiceToTask">
         <div><h2>VoiceToTask</h2><p class="cat">Note vocali AI</p></div>
       </div>
-      <p class="desc">Tu parli, <span class="hl"><b>lei trova le cose da fare</b></span>. Trascrive sul telefono e tira fuori task, scadenze e punti importanti. Niente diventa un task senza la tua conferma.</p>
+      <p class="desc">Tu parli, <b>lei trova le cose da fare</b>. Trascrive sul telefono e niente diventa un task senza la tua conferma.</p>
+      <ul class="feat"><li>Trascrizione sul telefono</li><li>Task e scadenze</li><li>Riascolti la frase</li></ul>
       <div class="shots">
         <img src="img/voicetotask-1.jpg" alt="VoiceToTask: registratore, trascrizione e task, tutto in un'app" loading="lazy">
         <img src="img/voicetotask-2.jpg" alt="VoiceToTask: tu parli, lei trova le cose da fare" loading="lazy">
@@ -109,18 +171,21 @@ footer a{color:var(--rialto);font-weight:700}
         <img src="img/voicetotask-4.jpg" alt="VoiceToTask: ogni cosa da fare con la frase da cui nasce" loading="lazy">
         <img src="img/voicetotask-5.jpg" alt="VoiceToTask: sintesi, task e trascrizione" loading="lazy">
       </div>
+      <p class="hint">Scorri le schermate →</p>
       <div class="cta">
-        <a class="btn" href="https://apps.apple.com/app/id6805474766"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>App Store</a>
-        <span class="note">Presto anche su Android</span>
+        <a class="badge" href="https://apps.apple.com/app/id6805474766"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg><span><small>Scarica su</small><strong>App Store</strong></span></a>
+        <span class="soon"><span class="dot" aria-hidden="true"></span>Presto su Android</span>
       </div>
     </section>
 
-    <section class="app syl" id="syllabus">
+    <section class="app syl rv" id="syllabus">
+      <span class="num" aria-hidden="true">03</span>
       <div class="top">
         <img src="img/syllabus.png" alt="Icona di Syllabus Planner">
         <div><h2>Syllabus Planner</h2><p class="cat">Piano esami</p></div>
       </div>
-      <p class="desc">Ti dice <span class="hl"><b>cosa studiare oggi</b></span>, pagina per pagina. Parte dalle date d'appello e lavora all'indietro. Salti un giorno? Il piano si rifà. Gratis per un esame.</p>
+      <p class="desc">Ti dice <b>cosa studiare oggi</b>, pagina per pagina. Salti un giorno? Il piano si rifà da solo.</p>
+      <ul class="feat"><li>Parte dalle date d'appello</li><li>Timer di studio</li><li>Gratis per un esame</li></ul>
       <div class="shots">
         <img src="img/syllabus-1.jpg" alt="Syllabus Planner: piano, timer ed esami, tutto in un'app" loading="lazy">
         <img src="img/syllabus-2.jpg" alt="Syllabus Planner: oggi sai già cosa studiare" loading="lazy">
@@ -128,18 +193,21 @@ footer a{color:var(--rialto);font-weight:700}
         <img src="img/syllabus-4.jpg" alt="Syllabus Planner: il timer di studio" loading="lazy">
         <img src="img/syllabus-5.jpg" alt="Syllabus Planner: ogni esame, a che punto sei" loading="lazy">
       </div>
+      <p class="hint">Scorri le schermate →</p>
       <div class="cta">
-        <a class="btn" href="https://apps.apple.com/app/id6805177869"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>App Store</a>
-        <span class="note">Presto anche su Android</span>
+        <a class="badge" href="https://apps.apple.com/app/id6805177869"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg><span><small>Scarica su</small><strong>App Store</strong></span></a>
+        <span class="soon"><span class="dot" aria-hidden="true"></span>Presto su Android</span>
       </div>
     </section>
 
-    <section class="app vault" id="vault">
+    <section class="app vault rv" id="vault">
+      <span class="num" aria-hidden="true">04</span>
       <div class="top">
         <img src="img/vault.png" alt="Icona di Vault Fiscale">
         <div><h2>Vault Fiscale</h2><p class="cat">730 e garanzie</p></div>
       </div>
-      <p class="desc">Gli scontrini del 730 e le garanzie, <span class="hl"><b>in ordine da soli</b></span>. Scansioni lo scontrino e a giugno la cartella per il CAF è pronta. Ti avvisa prima che una garanzia scada.</p>
+      <p class="desc">Gli scontrini del 730 e le garanzie, <b>in ordine da soli</b>. A giugno la cartella per il CAF è già pronta.</p>
+      <ul class="feat"><li>Scansioni lo scontrino</li><li>Spese detraibili</li><li>Avvisi sulle garanzie</li></ul>
       <div class="shots">
         <img src="img/vault-1.jpg" alt="Vault Fiscale: scontrini, 730 e garanzie, tutto in un'app" loading="lazy">
         <img src="img/vault-2.jpg" alt="Vault Fiscale: quello che ti spetta esiste solo se lo conservi" loading="lazy">
@@ -147,18 +215,21 @@ footer a{color:var(--rialto);font-weight:700}
         <img src="img/vault-4.jpg" alt="Vault Fiscale: a giugno la cartella per il CAF è pronta" loading="lazy">
         <img src="img/vault-5.jpg" alt="Vault Fiscale: una cassaforte sola" loading="lazy">
       </div>
+      <p class="hint">Scorri le schermate →</p>
       <div class="cta">
-        <a class="btn" href="https://apps.apple.com/app/id6805537752"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>App Store</a>
-        <span class="note">Presto anche su Android</span>
+        <a class="badge" href="https://apps.apple.com/app/id6805537752"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg><span><small>Scarica su</small><strong>App Store</strong></span></a>
+        <span class="soon"><span class="dot" aria-hidden="true"></span>Presto su Android</span>
       </div>
     </section>
 
-    <section class="app deck" id="decksleeve">
+    <section class="app deck rv" id="decksleeve">
+      <span class="num" aria-hidden="true">05</span>
       <div class="top">
         <img src="img/decksleeve.png" alt="Icona di DeckSleeve">
         <div><h2>DeckSleeve</h2><p class="cat">Scanner carte TCG</p></div>
       </div>
-      <p class="desc">Inquadri la carta, <span class="hl"><b>la riconosce</b></span>: nome, set, numero e prezzo di oggi. Pokémon, Magic, Yu-Gi-Oh!, One Piece e Dragon Ball Super. 10 scansioni gratis al giorno.</p>
+      <p class="desc">Inquadri la carta, <b>la riconosce</b>: nome, set, numero e prezzo di oggi.</p>
+      <ul class="feat"><li>Pokémon</li><li>Magic</li><li>Yu-Gi-Oh!</li><li>One Piece</li><li>Dragon Ball Super</li><li>10 scansioni gratis al giorno</li></ul>
       <div class="shots">
         <img src="img/decksleeve-1.jpg" alt="DeckSleeve: scanner, prezzi e set, tutto in un'app" loading="lazy">
         <img src="img/decksleeve-2.jpg" alt="DeckSleeve: inquadri la carta, la riconosce" loading="lazy">
@@ -166,17 +237,30 @@ footer a{color:var(--rialto);font-weight:700}
         <img src="img/decksleeve-4.jpg" alt="DeckSleeve: il prezzo di oggi, con fonte e data" loading="lazy">
         <img src="img/decksleeve-5.jpg" alt="DeckSleeve: ogni set, carta per carta" loading="lazy">
       </div>
+      <p class="hint">Scorri le schermate →</p>
       <div class="cta">
-        <a class="btn" href="https://apps.apple.com/app/id6808454285"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>App Store</a>
-        <span class="note">App indipendente, non affiliata ai giochi</span>
+        <a class="badge" href="https://apps.apple.com/app/id6808454285"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-1.9-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.2-.8s1.9.8 3.3.8c1.4 0 2.2-1.2 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.6-4.2zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg><span><small>Scarica su</small><strong>App Store</strong></span></a>
+        <span class="soon"><span class="dot" aria-hidden="true"></span>Presto su Android</span>
+        <span class="note">App indipendente, non affiliata agli editori dei giochi.</span>
       </div>
     </section>
   </main>
 
   <div class="band" aria-hidden="true"></div>
-  <footer>
-    <p>Seguici su Instagram: <a href="https://www.instagram.com/app.forgestudio/">@app.forgestudio</a></p>
+  <footer class="end rv">
+    <h3>Una nuova app,<br>quando è pronta.</h3>
+    <a class="ig" href="https://www.instagram.com/app.forgestudio/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Seguici su Instagram</a>
+    <p class="small">@app.forgestudio · AppForge Studio</p>
   </footer>
 </div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
 </body>
 </html>
