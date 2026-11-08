@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AppForge Studio · As nossas apps</title>
-<meta name="description" content="Rialto, VoiceToTask, Syllabus Planner, Vault Fiscale e DeckSleeve: apps para iPhone, e o Rialto também para Android. Grátis para experimentar.">
+<meta name="description" content="Rialto, VoiceToTask, Syllabus Planner, Vault Fiscale, DeckSleeve e PetCare Family: apps para iPhone, e o Rialto também para Android. Grátis para experimentar.">
 <meta property="og:title" content="AppForge Studio · As nossas apps">
-<meta property="og:description" content="Rialto, VoiceToTask, Syllabus Planner, Vault Fiscale e DeckSleeve: apps para iPhone, e o Rialto também para Android. Grátis para experimentar.">
+<meta property="og:description" content="Rialto, VoiceToTask, Syllabus Planner, Vault Fiscale, DeckSleeve e PetCare Family: apps para iPhone, e o Rialto também para Android. Grátis para experimentar.">
 <meta property="og:image" content="https://app-forgestudio.github.io/img/en/rialto-1.jpg">
 <meta name="theme-color" content="#F8F3EA">
 <meta name="color-scheme" content="light">
@@ -60,14 +60,15 @@ img{display:block}
 .fan{display:flex;justify-content:center;margin:30px 0 26px;height:clamp(92px,26vw,118px)}
 .fan a{display:block;margin:0 -10px;border-radius:24px;transition:transform .25s}
 .fan img{width:clamp(64px,19vw,92px);height:clamp(64px,19vw,92px);border-radius:22px;box-shadow:0 14px 30px rgba(40,30,10,.20),0 0 0 3px var(--paper)}
-.fan a:nth-child(1){transform:rotate(-14deg) translateY(16px)}
-.fan a:nth-child(2){transform:rotate(-7deg) translateY(4px)}
-.fan a:nth-child(3){transform:translateY(-2px);z-index:2}
-.fan a:nth-child(4){transform:rotate(7deg) translateY(4px)}
-.fan a:nth-child(5){transform:rotate(14deg) translateY(16px)}
+.fan a:nth-child(1){transform:rotate(-15deg) translateY(18px)}
+.fan a:nth-child(2){transform:rotate(-9deg) translateY(7px)}
+.fan a:nth-child(3){transform:rotate(-3deg) translateY(1px);z-index:2}
+.fan a:nth-child(4){transform:rotate(3deg) translateY(1px);z-index:2}
+.fan a:nth-child(5){transform:rotate(9deg) translateY(7px)}
+.fan a:nth-child(6){transform:rotate(15deg) translateY(18px)}
 .fan a:hover{transform:translateY(-10px) scale(1.06)!important;z-index:3}
 .fan .f{animation:float 5s ease-in-out infinite}
-.fan a:nth-child(2) .f{animation-delay:-1s}.fan a:nth-child(3) .f{animation-delay:-2s}.fan a:nth-child(4) .f{animation-delay:-3s}.fan a:nth-child(5) .f{animation-delay:-4s}
+.fan a:nth-child(2) .f{animation-delay:-1s}.fan a:nth-child(3) .f{animation-delay:-2s}.fan a:nth-child(4) .f{animation-delay:-3s}.fan a:nth-child(5) .f{animation-delay:-4s}.fan a:nth-child(6) .f{animation-delay:-5s}
 @keyframes float{50%{transform:translateY(-6px)}}
 @media (prefers-reduced-motion:reduce){.fan .f{animation:none}}
 h1{margin:0;font-size:clamp(40px,10vw,68px);line-height:.98;letter-spacing:-.045em;font-weight:800}
@@ -80,7 +81,7 @@ h1 em{font-style:normal;color:var(--blue)}
 
 /* schede app */
 .app{--a:var(--blue);--t:#E7EFF9;position:relative;margin:28px 0;padding:26px 0 24px;border-radius:32px;background:linear-gradient(180deg,var(--t) 0,var(--card) 220px);box-shadow:0 22px 60px rgba(60,40,10,.09);overflow:hidden;scroll-margin-top:76px}
-.app.vtt{--a:#A8561F;--t:#F7EADF}.app.syl{--a:#6A4FC0;--t:#EEEAFA}.app.vault{--a:#1F4FCB;--t:#E5ECFC}.app.deck{--a:#7A5C00;--t:#FBF1CC}
+.app.vtt{--a:#A8561F;--t:#F7EADF}.app.syl{--a:#6A4FC0;--t:#EEEAFA}.app.vault{--a:#1F4FCB;--t:#E5ECFC}.app.deck{--a:#7A5C00;--t:#FBF1CC}.app.pet{--a:#B4530F;--t:#FDEBDC}
 .num{position:absolute;right:18px;top:10px;font-size:clamp(52px,14vw,76px);z-index:0;font-weight:800;letter-spacing:-.05em;line-height:1;color:transparent;-webkit-text-stroke:2px var(--a);opacity:.22}
 .top{position:relative;z-index:1;display:flex;gap:18px;align-items:center;padding:0 24px}
 .top img{width:88px;height:88px;border-radius:21px;flex:none;box-shadow:0 10px 24px rgba(0,0,0,.16)}
@@ -170,6 +171,7 @@ h1 em{font-style:normal;color:var(--blue)}
       <li><a href="#syllabus" aria-label="Syllabus Planner"><img src="../img/syllabus.png" alt=""></a></li>
       <li><a href="#vault" aria-label="Vault Fiscale"><img src="../img/vault.png" alt=""></a></li>
       <li><a href="#decksleeve" aria-label="DeckSleeve"><img src="../img/decksleeve.png" alt=""></a></li>
+      <li><a href="#petcare" aria-label="PetCare Family"><img src="../img/petcare.png" alt=""></a></li>
     </ul>
     <details class="lang">
       <summary aria-label="Idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>PT</summary>
@@ -201,9 +203,10 @@ h1 em{font-style:normal;color:var(--blue)}
       <a href="#syllabus" aria-label="Syllabus Planner"><div class="f"><img src="../img/syllabus.png" alt=""></div></a>
       <a href="#vault" aria-label="Vault Fiscale"><div class="f"><img src="../img/vault.png" alt=""></div></a>
       <a href="#decksleeve" aria-label="DeckSleeve"><div class="f"><img src="../img/decksleeve.png" alt=""></div></a>
+      <a href="#petcare" aria-label="PetCare Family"><div class="f"><img src="../img/petcare.png" alt=""></div></a>
     </div>
     <h1>Todos os dias,<br><em>mais simples.</em></h1>
-    <p class="lead">Cinco apps para iPhone: dinheiro, notas de voz, estudo, talões e cartas colecionáveis. Todas grátis para experimentar.</p>
+    <p class="lead">Seis apps para iPhone: dinheiro, notas de voz, estudo, talões, cartas colecionáveis e animais de estimação. Todas grátis para experimentar.</p>
     <p class="android"><span class="dot" aria-hidden="true"></span><span><b>No Android</b> já está o Rialto. <b>Em breve:</b> VoiceToTask, Syllabus Planner, Vault Fiscale e DeckSleeve.</span></p>
     <p class="langnote">As apps estão disponíveis em inglês, italiano, francês, alemão e espanhol.</p>
   </header>
@@ -318,6 +321,27 @@ h1 em{font-style:normal;color:var(--blue)}
         <a class="store apple" href="https://apps.apple.com/app/id6808454285"><img src="../badges/apple-pt.svg" alt="Descarregar na App Store"></a>
         <span class="soon2" style="width:calc(var(--bh)*2.9916)"><span class="dot" aria-hidden="true"></span><span><small>Em breve no</small><strong>Android</strong></span></span>
         <span class="note">App independente, sem ligação às editoras dos jogos.</span>
+      </div>
+    </section>
+
+    <section class="app pet rv" id="petcare">
+      <span class="num" aria-hidden="true">06</span>
+      <div class="top">
+        <img src="../img/petcare.png" alt="Ícone de PetCare Family">
+        <div><h2>PetCare Family</h2><p class="cat">Cuidar dos animais</p></div>
+      </div>
+      <p class="desc">Medicamentos, vacinas e consultas no veterinário, <b>partilhados em família</b>. Quando alguém marca uma dose, todos veem: nenhuma dose dada duas vezes, nenhuma esquecida.</p>
+      <ul class="feat"><li>Medicamentos e vacinas</li><li>Consultas no veterinário</li><li>Despesas por animal</li><li>Ficha de emergência</li></ul>
+      <div class="shots">
+        <img src="../img/en/petcare-1.jpg" alt="PetCare Family · imagem 1" loading="lazy">
+        <img src="../img/en/petcare-2.jpg" alt="PetCare Family · imagem 2" loading="lazy">
+        <img src="../img/en/petcare-3.jpg" alt="PetCare Family · imagem 3" loading="lazy">
+        <img src="../img/en/petcare-4.jpg" alt="PetCare Family · imagem 4" loading="lazy">
+        <img src="../img/en/petcare-5.jpg" alt="PetCare Family · imagem 5" loading="lazy">
+      </div>
+      <p class="hint">Desliza as imagens →</p>
+      <div class="cta">
+        <a class="store apple" href="https://apps.apple.com/app/id6829502896"><img src="../badges/apple-pt.svg" alt="Descarregar na App Store"></a>
       </div>
     </section>
   </main>
