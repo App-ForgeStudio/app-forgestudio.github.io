@@ -232,7 +232,7 @@ h1 em{font-style:normal;color:var(--blue)}
       </div>
       <p class="hint">स्क्रीनशॉट स्वाइप करें →</p>
       <div class="cta">
-        <a class="store apple" href="https://apps.apple.com/app/id6804364683"><img src="../badges/apple-hi.svg" alt="यहाँ से डाउनलोड करें App Store"></a>
+        <a class="store apple" href="https://apps.apple.com/app/apple-store/id6804364683?pt=129348976&amp;ct=sito&amp;mt=8"><img src="../badges/apple-hi.svg" alt="यहाँ से डाउनलोड करें App Store"></a>
         <a class="store gp" href="https://play.google.com/store/apps/details?id=com.nicolo.rialto&amp;hl=hi"><img src="../badges/gplay-hi.png" alt="यहाँ पाएँ Google Play"></a>
       </div>
     </section>
@@ -257,7 +257,7 @@ h1 em{font-style:normal;color:var(--blue)}
       </div>
       <p class="hint">स्क्रीनशॉट स्वाइप करें →</p>
       <div class="cta">
-        <a class="store apple" href="https://apps.apple.com/app/id6805474766"><img src="../badges/apple-hi.svg" alt="यहाँ से डाउनलोड करें App Store"></a>
+        <a class="store apple" href="https://apps.apple.com/app/apple-store/id6805474766?pt=129348976&amp;ct=sito&amp;mt=8"><img src="../badges/apple-hi.svg" alt="यहाँ से डाउनलोड करें App Store"></a>
         <span class="soon2" style="width:calc(var(--bh)*2.9916)"><span class="dot" aria-hidden="true"></span><span><small>जल्द ही</small><strong>Android</strong></span></span>
       </div>
     </section>
@@ -282,7 +282,7 @@ h1 em{font-style:normal;color:var(--blue)}
       </div>
       <p class="hint">स्क्रीनशॉट स्वाइप करें →</p>
       <div class="cta">
-        <a class="store apple" href="https://apps.apple.com/app/id6805177869"><img src="../badges/apple-hi.svg" alt="यहाँ से डाउनलोड करें App Store"></a>
+        <a class="store apple" href="https://apps.apple.com/app/apple-store/id6805177869?pt=129348976&amp;ct=sito&amp;mt=8"><img src="../badges/apple-hi.svg" alt="यहाँ से डाउनलोड करें App Store"></a>
         <a class="store gp" href="https://play.google.com/store/apps/details?id=com.nicolo.syllabusplanner&amp;hl=hi"><img src="../badges/gplay-hi.png" alt="यहाँ पाएँ Google Play"></a>
       </div>
     </section>
@@ -307,7 +307,7 @@ h1 em{font-style:normal;color:var(--blue)}
       </div>
       <p class="hint">स्क्रीनशॉट स्वाइप करें →</p>
       <div class="cta">
-        <a class="store apple" href="https://apps.apple.com/app/id6805537752"><img src="../badges/apple-hi.svg" alt="यहाँ से डाउनलोड करें App Store"></a>
+        <a class="store apple" href="https://apps.apple.com/app/apple-store/id6805537752?pt=129348976&amp;ct=sito&amp;mt=8"><img src="../badges/apple-hi.svg" alt="यहाँ से डाउनलोड करें App Store"></a>
         <span class="soon2" style="width:calc(var(--bh)*2.9916)"><span class="dot" aria-hidden="true"></span><span><small>जल्द ही</small><strong>Android</strong></span></span>
       </div>
     </section>
@@ -330,7 +330,7 @@ h1 em{font-style:normal;color:var(--blue)}
       </div>
       <p class="hint">स्क्रीनशॉट स्वाइप करें →</p>
       <div class="cta">
-        <a class="store apple" href="https://apps.apple.com/app/id6808454285"><img src="../badges/apple-hi.svg" alt="यहाँ से डाउनलोड करें App Store"></a>
+        <a class="store apple" href="https://apps.apple.com/app/apple-store/id6808454285?pt=129348976&amp;ct=sito&amp;mt=8"><img src="../badges/apple-hi.svg" alt="यहाँ से डाउनलोड करें App Store"></a>
         <span class="soon2" style="width:calc(var(--bh)*2.9916)"><span class="dot" aria-hidden="true"></span><span><small>जल्द ही</small><strong>Android</strong></span></span>
         <span class="note">स्वतंत्र ऐप, गेम प्रकाशकों से संबद्ध नहीं।</span>
       </div>
@@ -353,7 +353,7 @@ h1 em{font-style:normal;color:var(--blue)}
       </div>
       <p class="hint">स्क्रीनशॉट स्वाइप करें →</p>
       <div class="cta">
-        <a class="store apple" href="https://apps.apple.com/app/id6829502896"><img src="../badges/apple-hi.svg" alt="यहाँ से डाउनलोड करें App Store"></a>
+        <a class="store apple" href="https://apps.apple.com/app/apple-store/id6829502896?pt=129348976&amp;ct=sito&amp;mt=8"><img src="../badges/apple-hi.svg" alt="यहाँ से डाउनलोड करें App Store"></a>
       </div>
     </section>
   </main>
@@ -381,6 +381,13 @@ h1 em{font-style:normal;color:var(--blue)}
   }
   var dl=document.querySelector('.lang');
   document.addEventListener('click',function(e){if(dl.open && !dl.contains(e.target)) dl.open=false;});
+  // Codice di campagna dei pulsanti App Store: ct=sito, ct=reddit se si arriva da Reddit.
+  try{
+    var host=(document.referrer||'').split('/')[2]||'';
+    var src=(/[?&](utm_source|ref)=reddit\b/i.test(location.search)||/(^|\.)(reddit\.com|redd\.it)$/i.test(host)||/Reddit/i.test(navigator.userAgent))?'reddit':null;
+    try{ if(src) sessionStorage.setItem('ct',src); else src=sessionStorage.getItem('ct'); }catch(e){}
+    if(src) document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function(a){a.href=a.href.replace('ct=sito','ct='+src);});
+  }catch(e){}
 </script>
 </body>
 </html>
